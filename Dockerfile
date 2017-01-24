@@ -1,4 +1,4 @@
-FROM hub.solar.lan/alpine-base:latest
+FROM verdel/alpine-base:latest
 MAINTAINER Vadim Aleksandrov <valeksandrov@me.com>
 
 ENV DB_HOST localhost
