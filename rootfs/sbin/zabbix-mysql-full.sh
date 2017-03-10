@@ -89,5 +89,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+echo
+echo "Rotate backup copy..."
+find "${DUMPDIR}/" -maxdepth 1 -mtime +10 -type f -exec rm -rv {} \;
+if [ $? -ne 0 ]; then
+    echo -e "\nERROR: Could not rotate backup file, see previous messages" >&2
+    exit 1
+fi
+
 echo -e "\nBackup Completed:\n${DUMPFILE}.gz"
 exit
