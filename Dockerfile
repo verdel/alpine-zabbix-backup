@@ -5,6 +5,7 @@ ENV DB_HOST localhost
 ENV DB_PORT 3306
 ENV DB_USER zabbix
 ENV DB_PASS zabbix
+ENV DB_NAME zabbix
 
 COPY rootfs /
 
