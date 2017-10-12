@@ -12,7 +12,7 @@ COPY rootfs /
 # Install zabbix
 RUN apk --update add \
     bash \
-    zabbix-setup \
+    zabbix-setup@edge \
     mysql-client \
     # Clean up
     && rm -rf \
